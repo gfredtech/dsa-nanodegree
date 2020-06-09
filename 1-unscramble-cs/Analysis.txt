@@ -1,0 +1,5 @@
+Task 0 -> O(1) since we reading the values from position we know ahead of time.
+Task 1 -> O(n), where n = sum of records in both datasets since we're looping over both records.
+Task 2 -> O(n), where n = number of records in call dataset. we have to loop over all elements to find max
+Task 3 -> O(nlogn), since we're sorting our records using Python's internal sorted() function(TimSort) with a runtime complexity of O(nlogn)
+Task 4 -> O(nlogn), since we're sorting our records using Python's internal sorted() function(TimSort) with a runtime complexity of O(nlogn)

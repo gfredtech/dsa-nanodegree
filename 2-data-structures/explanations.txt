@@ -1,0 +1,61 @@
+Problem 1
+I use a deque to store the elements in my cache.
+This allows me to store and the least recently used items simply by pushing and popping respectively.
+Time complexity for adding an item is O(1) since it takes a constant time to append an item to my cache
+Time complexity for getting an item is O(n) where n is the cache capacity because I have to iterate the cache to find the
+item in the internal deque structure, and it never grows beyond capacity.
+Space complexity is O(n) where n is cache capacity.
+
+
+Problem 2
+I recursively traverse the directory. I check the current directory for items matching the suffix, and if there are none,
+I iterate over all the directories in the current directory and recursively check those directories as well.
+The time complexity is O(n + m), where n represents the total number of files and m is the number of folders,
+since I visit each file exactly once.
+Space complexity is O(n) where n represents the total number of files.
+
+
+Problem 3
+The huffman encoding is basically trying to build a binary tree
+with each character on each leaf. And its path to leaf represents the code
+of the character on the leaf.
+Take a string and determine the relevant frequencies of the characters.
+Build and sort a list of tuples from lowest to highest frequencies.
+Build the Huffman Tree by assigning a binary code to each letter,
+using shorter codes for the more frequent letters. (This is the heart of the Huffman algorithm.)
+Trim the Huffman Tree (remove the frequencies from the previously built tree).
+Encode the text into its compressed form.
+Decode the text from its compressed form.
+Time complexity is O(nlogn) where n is number of unique characters.
+Space complexity is O(n) where n is number of unique characters
+
+
+Problem 4
+Depth first search is used to traverse groups and find users in sub-group since
+this structure is a tree-like structure
+Time Complexity: O(n*m), where n represents number of nodes, and for each node, there is a list of users of length m.
+Space complexity is O(1) since we're not using any extra space.
+
+
+Problem 5
+the blockchain is implemented using a classical doubly-linked list.
+When the blockchain is fist created, we store an empty sentinel head node. after adding an element, we store the
+new block's data along with its timestamp and the the hash of the previous block. This helps maintain the integrity of
+the blockchain and prevents earlier blocks from being modified by a third-party.
+time complexity to append is O(1) because we have a tail sentinel node to track our last element
+time complexity to traverse it is O(n) where nis total number of blocks.
+space complexity is O(n) where n is total number of blocks.
+
+
+Problem 6
+For union, we use a set to track the node values for both lists.
+we traverse both, then store their values in the same set
+We then create a new linked list from the elements in our set.
+Time and space complexity = O(n + m) where n is number of elements in list 1,
+and m is number of elements in list 2
+For intersection, we use two sets to track the node values for each list.
+after adding the values of each list to their
+respective sets, we iterate over one set, and check if the current element in set 1 also exists in set 2.
+if so, we add it to our new list.
+Time and space complexity = O(n + m) where n is number of elements in list 1,
+and m is number of elements in list 2
